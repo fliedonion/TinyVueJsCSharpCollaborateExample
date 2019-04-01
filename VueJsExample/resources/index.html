@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<base href="{# inject-path #}\">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .hello {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div :class="{hello:isHello}">
+            <p>{{message}}</p>
+            <button id="mybtn" @click="changeMessage">Change Message</button>
+        </div>
+        <div>
+            <button @click="callExternal">let's call C# from vue!</button>
+        </div>
+    </div>
+
+    <script src="js/sample.js"></script>
+</body>
+</html>
